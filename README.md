@@ -152,6 +152,19 @@ It is an Online Web Browser IDE for Verilog/System-verilog/TL-Verilog Simulation
 It is a tool which converts Verilog code to C++ objects. Refer:
 https://www.veripool.org/verilator/
 
+## **Steps to simulate a mixed signal model in eSim**
+
+1. Open eSim and go to the Makerchip tab.
+2. Add top module the first verilog code lets say priority encoder and edit it using makerchip.
+3. Simulate and arrive to the correct results.
+4. Go to ngVeri tab and convert this Transaction level verilog (.tlv) file to ng spice model.
+5. Do the above steps for all the digital verilog codes present.
+6. Create a project.
+7. Go to the schematic editor and make a schematic of your circuit, add all the analog and digital ( created by you in the previous steps ) components using adequate adc and dac bridges.
+8. Generate the ngSpice netlist and save the schematic.
+9. Go to the kiCad to ngspice converter and give all constraints to the model precisely.
+10. Simulate using the simulate tab.
+
 ## **Final schematic in eSim**
 ----
 ![schematic](https://github.com/krunalbadlani/muximages/blob/main/schematic.png)
@@ -181,7 +194,7 @@ All the files of the circuit will be in the code above.
 I would like to acknowedge the following resources and people for their support:
 1. FOSSEE, IIT Bombay:-  https://fossee.in/
 2. Steve Hoover, Founder, Redwood EDA
-3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com https://www.vlsisystemdesign.com/
+3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com https://www.vlsisystemdesign.com/ and the SKY130 IPs by VSD 
 4. Sumanto Kar, eSim Team, FOSSEE
 5. IIT B - http://iitb.ac.in/
 6. https://www.google.co.in/
@@ -189,6 +202,8 @@ I would like to acknowedge the following resources and people for their support:
 8. https://www.c2s.gov.in/
 9. https://www.allaboutcircuits.com/textbook/digital/chpt-13/flash-adc/
 10. https://www.electrical4u.com/parallel-in-parallel-out-pipo-shift-register/
+11. https://skywater-pdk.readthedocs.io/en/main/
+
 
 
 
