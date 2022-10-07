@@ -1,8 +1,7 @@
 # **Final Report**
 ## **CRACK SENSING CIRCUIT**
 ---
-- [**Final Report**](#--final-report--)
-  * [**CRACK SENSING CIRCUIT**](#--crack-sensing-circuit--)
+
     + [**The Idea**](#--the-idea--)
     + [**The Implementation**](#--the-implementation--)
     + [**FLASH ADC and PRIORITY ENCODER**](#--flash-adc-and-priority-encoder--)
@@ -12,12 +11,12 @@
     + [NgSpice](#ngspice)
     + [Makerchip](#makerchip)
     + [Verilator](#verilator)
-  * [**Steps to simulate a mixed signal model in eSim**](#--steps-to-simulate-a-mixed-signal-model-in-esim--)
-  * [**Final schematic in eSim**](#--final-schematic-in-esim--)
-  * [**Results**](#--results--)
-  * [**Acknowledgements**](#--acknowledgements--)
+    + [**Steps to simulate a mixed signal model in eSim**](#--steps-to-simulate-a-mixed-signal-model-in-esim--)
+    + [**Final schematic in eSim**](#--final-schematic-in-esim--)
+    + [**Results**](#--results--)
+    + [**Acknowledgements**](#--acknowledgements--)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
