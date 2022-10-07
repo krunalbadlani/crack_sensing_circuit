@@ -1,0 +1,49 @@
+* C:\Users\kruna\eSim-Workspace\crack_detector\crack_detector.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 10/07/22 19:57:49
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+v3  v3 GND DC		
+v1  Vin GND DC		
+v2  vref GND DC		
+U12  Vout1 plot_v1		
+scmode1  SKY130mode		
+SC7  s1 s0 ? sky130_fd_pr__res_generic_pd		
+SC8  s2 s1 ? sky130_fd_pr__res_generic_pd		
+SC6  s3 s2 ? sky130_fd_pr__res_generic_pd		
+SC5  s4 s3 ? sky130_fd_pr__res_generic_pd		
+SC4  s5 s4 ? sky130_fd_pr__res_generic_pd		
+SC3  s6 s5 ? sky130_fd_pr__res_generic_pd		
+SC1  GND s6 ? sky130_fd_pr__res_generic_pd		
+U13  Vout2 plot_v1		
+U14  Vout plot_v1		
+SC2  vref s0 ? sky130_fd_pr__res_generic_pd		
+U8  Net-_U10-Pad8_ Net-_U10-Pad9_ Net-_U10-Pad10_ Net-_U10-Pad11_ Net-_U10-Pad12_ Net-_U10-Pad13_ Net-_U10-Pad14_ Net-_U10-Pad14_ Net-_U17-Pad2_ Net-_U17-Pad3_ Net-_U17-Pad4_ krunal_priority		
+U10  v01 Net-_U10-Pad2_ Net-_U10-Pad3_ Net-_U10-Pad4_ v04 v05 Net-_U10-Pad7_ Net-_U10-Pad8_ Net-_U10-Pad9_ Net-_U10-Pad10_ Net-_U10-Pad11_ Net-_U10-Pad12_ Net-_U10-Pad13_ Net-_U10-Pad14_ adc_bridge_7		
+U2  Vin plot_v1		
+U1  vref plot_v1		
+U5  s1 plot_v1		
+U9  v01 plot_v1		
+U4  s2 plot_v1		
+U7  v04 plot_v1		
+U6  v05 plot_v1		
+U3  s4 plot_v1		
+X6  v3 vss s0 Vin v01 GND avsd_opamp		
+X7  v3 vss s1 Vin Net-_U10-Pad2_ GND avsd_opamp		
+X5  v3 vss s2 Vin Net-_U10-Pad3_ GND avsd_opamp		
+X4  v3 vss s3 Vin Net-_U10-Pad4_ GND avsd_opamp		
+X3  v3 vss s4 Vin v04 GND avsd_opamp		
+X2  v3 vss s5 Vin v05 GND avsd_opamp		
+X1  v3 vss s6 Vin Net-_U10-Pad7_ GND avsd_opamp		
+v10  vss GND DC		
+v4  vk GND pulse		
+U15  vk Net-_U11-Pad1_ adc_bridge_1		
+U18  vk plot_v1		
+U16  Net-_U11-Pad5_ Net-_U11-Pad6_ Net-_U11-Pad7_ Vout Vout1 Vout2 dac_bridge_3		
+U17  Net-_U11-Pad1_ Net-_U17-Pad2_ Net-_U17-Pad3_ Net-_U17-Pad4_ Net-_U11-Pad2_ Net-_U11-Pad3_ Net-_U11-Pad4_ krunal_pipo		
+U11  Net-_U11-Pad1_ Net-_U11-Pad2_ Net-_U11-Pad3_ Net-_U11-Pad4_ Net-_U11-Pad5_ Net-_U11-Pad6_ Net-_U11-Pad7_ lcd_2		
+
+.end

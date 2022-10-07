@@ -1,0 +1,88 @@
+* c:\users\kruna\esim-workspace\crack_detector\crack_detector.cir
+
+.include avsd_opamp.sub
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__r+c.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__pnp.model.spice"
+.lib "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130.lib.spice" tt
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__inductors.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pd2nw_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__diode_pw2nd_11v0.model.spice"
+.include "C:\FOSSEE\eSim\library\sky130_fd_pr\models\sky130_fd_pr__model__linear.model.spice"
+v3 v3 gnd  dc 4.6
+v1 vin gnd  dc 3.70
+v2 vref gnd  dc 5
+* u12  vout1 plot_v1
+* s c m o d e
+xsc7 s1 s0 ? sky130_fd_pr__res_generic_pd L = 0.85
+xsc8 s2 s1 ? sky130_fd_pr__res_generic_pd L = 0.85
+xsc6 s3 s2 ? sky130_fd_pr__res_generic_pd L  = 0.85
+xsc5 s4 s3 ? sky130_fd_pr__res_generic_pd L =0.85
+xsc4 s5 s4 ? sky130_fd_pr__res_generic_pd L = 0.85
+xsc3 s6 s5 ? sky130_fd_pr__res_generic_pd L = 0.85
+xsc1 gnd s6 ? sky130_fd_pr__res_generic_pd L = 0.85
+* u13  vout2 plot_v1
+* u14  vout plot_v1
+xsc2 vref s0 ? sky130_fd_pr__res_generic_pd L = 0.85
+* u8  net-_u10-pad8_ net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ net-_u10-pad13_ net-_u10-pad14_ net-_u10-pad14_ net-_u17-pad2_ net-_u17-pad3_ net-_u17-pad4_ krunal_priority
+* u10  v01 net-_u10-pad2_ net-_u10-pad3_ net-_u10-pad4_ v04 v05 net-_u10-pad7_ net-_u10-pad8_ net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ net-_u10-pad13_ net-_u10-pad14_ adc_bridge_7
+* u2  vin plot_v1
+* u1  vref plot_v1
+* u5  s1 plot_v1
+* u9  v01 plot_v1
+* u4  s2 plot_v1
+* u7  v04 plot_v1
+* u6  v05 plot_v1
+* u3  s4 plot_v1
+x6 v3 vss s0 vin v01 gnd avsd_opamp
+x7 v3 vss s1 vin net-_u10-pad2_ gnd avsd_opamp
+x5 v3 vss s2 vin net-_u10-pad3_ gnd avsd_opamp
+x4 v3 vss s3 vin net-_u10-pad4_ gnd avsd_opamp
+x3 v3 vss s4 vin v04 gnd avsd_opamp
+x2 v3 vss s5 vin v05 gnd avsd_opamp
+x1 v3 vss s6 vin net-_u10-pad7_ gnd avsd_opamp
+v10 vss gnd  dc -3
+v4  vk gnd pulse(0 5 0.1n 0.1n 0.1n 0.1 0.2)
+* u15  vk net-_u11-pad1_ adc_bridge_1
+* u18  vk plot_v1
+* u16  net-_u11-pad5_ net-_u11-pad6_ net-_u11-pad7_ vout vout1 vout2 dac_bridge_3
+* u17  net-_u11-pad1_ net-_u17-pad2_ net-_u17-pad3_ net-_u17-pad4_ net-_u11-pad2_ net-_u11-pad3_ net-_u11-pad4_ krunal_pipo
+* u11  net-_u11-pad1_ net-_u11-pad2_ net-_u11-pad3_ net-_u11-pad4_ net-_u11-pad5_ net-_u11-pad6_ net-_u11-pad7_ lcd_2
+a1 [net-_u10-pad8_ net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ net-_u10-pad13_ net-_u10-pad14_ net-_u10-pad14_ ] [net-_u17-pad2_ net-_u17-pad3_ net-_u17-pad4_ ] u8
+a2 [v01 net-_u10-pad2_ net-_u10-pad3_ net-_u10-pad4_ v04 v05 net-_u10-pad7_ ] [net-_u10-pad8_ net-_u10-pad9_ net-_u10-pad10_ net-_u10-pad11_ net-_u10-pad12_ net-_u10-pad13_ net-_u10-pad14_ ] u10
+a3 [vk ] [net-_u11-pad1_ ] u15
+a4 [net-_u11-pad5_ net-_u11-pad6_ net-_u11-pad7_ ] [vout vout1 vout2 ] u16
+a5 [net-_u11-pad1_ ] [net-_u17-pad2_ net-_u17-pad3_ net-_u17-pad4_ ] [net-_u11-pad2_ net-_u11-pad3_ net-_u11-pad4_ ] u17
+a6 [net-_u11-pad1_ ] [net-_u11-pad2_ ] [net-_u11-pad3_ ] [net-_u11-pad4_ ] [net-_u11-pad5_ ] [net-_u11-pad6_ ] [net-_u11-pad7_ ] u11
+* Schematic Name:                             krunal_priority, NgSpice Name: krunal_priority
+.model u8 krunal_priority(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             adc_bridge_7, NgSpice Name: adc_bridge
+.model u10 adc_bridge(in_low=2.6 in_high=3.5 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             adc_bridge_1, NgSpice Name: adc_bridge
+.model u15 adc_bridge(in_low=0.5 in_high=4.5 rise_delay=1.0e-9 fall_delay=1.0e-9 ) 
+* Schematic Name:                             dac_bridge_3, NgSpice Name: dac_bridge
+.model u16 dac_bridge(out_low=0 out_high=5 out_undef=0.5 input_load=1.0e-12 t_rise=1.0e-9 t_fall=1.0e-9 ) 
+* Schematic Name:                             krunal_pipo, NgSpice Name: krunal_pipo
+.model u17 krunal_pipo(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+* Schematic Name:                             lcd_2, NgSpice Name: lcd_2
+.model u11 lcd_2(rise_delay=1.0e-9 fall_delay=1.0e-9 input_load=1.0e-12 instance_id=1 ) 
+.tran 0.001e-00 2e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+plot v(vout1)
+plot v(vout2)
+plot v(vout)
+plot v(vin)
+plot v(vref)
+plot v(s1)
+plot v(v01)
+plot v(s2)
+plot v(v04)
+plot v(v05)
+plot v(s4)
+plot v(vk)
+.endc
+.end
