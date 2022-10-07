@@ -202,7 +202,7 @@ Makerchip output matching the same :-
 ![schematic](https://github.com/krunalbadlani/muximages/blob/main/makerchip.png)
 
 
-All the files of the circuit will be in the code above.
+All the [files](https://github.com/krunalbadlani/crack_sensing_circuit/tree/main/files) of the circuit will be in the code above.
 
 ## **Acknowledgements**
 I would like to acknowledge the following resources and people for their support:
