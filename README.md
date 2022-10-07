@@ -191,7 +191,7 @@ Makerchip output matching the same :-
 All the files of the circuit will be in the code above.
 
 ## **Acknowledgements**
-I would like to acknowedge the following resources and people for their support:
+I would like to acknowledge the following resources and people for their support:
 1. FOSSEE, IIT Bombay:-  https://fossee.in/
 2. Steve Hoover, Founder, Redwood EDA
 3. Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd. - kunalpghosh@gmail.com https://www.vlsisystemdesign.com/ and the SKY130 IPs by VSD 
