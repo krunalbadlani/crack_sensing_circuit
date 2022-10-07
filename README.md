@@ -5,6 +5,11 @@
 
 - [**Final Report**](#final-report)
   - [**CRACK SENSING CIRCUIT**](#crack-sensing-circuit)
+  - [**The Idea**](#the-idea)
+  - [**The Implementation**](#the-implementation)
+  - [**FLASH ADC and PRIORITY ENCODER**](#flash-adc-and-priority-encoder)
+  - [**PIPO and LCD interfacing Circuit**](#pipo-and-lcd-interfacing-circuit)
+  - [**Softwares/tools used in this simulation**](#softwarestools-used-in-this-simulation)
   - [**Steps to simulate a mixed signal model in eSim**](#steps-to-simulate-a-mixed-signal-model-in-esim)
   - [**Final schematic in eSim**](#final-schematic-in-esim)
   - [**Results**](#results)
@@ -14,11 +19,11 @@
 
 
 
-### **The Idea**
+## **The Idea**
 ---
 Any crack in a structure changes the strain profile of the material underneath. In situations like a boiler or a jet engine this can be critical. This strain can be detected using a strain gauge i.e. a device which changes its electrical resistance which change in strain. So if such a variable resistor is placed in a voltage divider/wheatstone bridge we can get different voltage levels for different strains detected. This change in voltage can be sensed by a Mixed signal SoC as discussed in this design.
 
-### **The Implementation**
+## **The Implementation**
 ---
 This circuit is implemented using the following 5 stages:-
 
@@ -28,7 +33,7 @@ This circuit is implemented using the following 5 stages:-
 4. A PIPO to send data from the encoder to lcd every clock cycle
 5. LCD interfacing circuit to display the data on a LCD
 
-### **FLASH ADC and PRIORITY ENCODER**
+## **FLASH ADC and PRIORITY ENCODER**
 ---
 Also called the parallel A/D converter, this circuit is the simplest to understand. It is formed of a series of comparators, each one comparing the input signal to a unique reference voltage. The comparator outputs connect to the inputs of a priority encoder circuit, which then produces a binary output. The following figure shows a 3-bit flash ADC circuit:
 
@@ -40,7 +45,7 @@ The calculation for eg. an input of 3.70 V with Vref = 5 V:
 
 The input lies in the range (these voltages can be found by voltage divider calculations) 5/8 * Vref and 6/8 * Vref which would make the output of the 5th comparator high which would give the corresponding input to priority encoder which would give the output 101 (5).
 
-### **PIPO and LCD interfacing Circuit**
+## **PIPO and LCD interfacing Circuit**
 ---
 Parallel In Parallel Out (PIPO) shift registers are the type of storage devices in which both data loading as well as data retrieval processes occur in parallel mode.
 
@@ -142,7 +147,7 @@ end
 endmodule
 ```
 
-### **Softwares/tools used in this simulation**
+## **Softwares/tools used in this simulation**
 ---
 ### eSim
 It is an Open Source EDA developed by FOSSEE, IIT Bombay. It is used for electronic circuit simulation. It is made by the combination of two software namely NgSpice and KiCAD.
