@@ -31,7 +31,7 @@ The calculation for eg. an input of 3.70 V with Vref = 5 V:
 
 The input lies in the range (these voltages can be found by voltage divider calculations) 5/8 * Vref and 6/8 * Vref which would make the output of the 5th comparator high which would give the corresponding input to priority encoder which would give the output 101 (5).
 
-### *** PIPO and LCD interfacing Circuit ***
+### **PIPO and LCD interfacing Circuit**
 ---
 Parallel In Parallel Out (PIPO) shift registers are the type of storage devices in which both data loading as well as data retrieval processes occur in parallel mode.
 
